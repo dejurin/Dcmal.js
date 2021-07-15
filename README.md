@@ -6,13 +6,13 @@
 
 
 ```
-const x = (0.00001234).toFixed(2)
+const x = (0.00001254).toFixed(2)
 // return "0.00" - NO GOOD
 ```
 
 
 ```
 const dcmal = Dcmal({prec: 2})
-const x = dcmal.round(0.00001234)
-// return "0.000012" - GOOD
+const x = dcmal.round(0.00001254)
+// return "0.000013" - GOOD
 ```

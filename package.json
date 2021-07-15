@@ -1,7 +1,7 @@
 {
     "name": "dcmal",
     "description": "Humanized number with decimal point.",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "license": "MIT",
     "main": "./dist/dcmal.js",
     "author": "@dejurin",
