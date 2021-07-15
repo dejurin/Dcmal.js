@@ -8,8 +8,8 @@ const uglify = composer(uglifyES, console);
 const clean = () => del(['dist/*']);
 
 const dest = () => {
-    return gulp.src('./dist/Dcmal.js', { allowEmpty: true })
-        .pipe(concat('Dcmal.min.js'))
+    return gulp.src('./dist/dcmal.js', { allowEmpty: true })
+        .pipe(concat('dcmal.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest('dist', { sourcemaps: true }));
 }
