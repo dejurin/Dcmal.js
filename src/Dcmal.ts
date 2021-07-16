@@ -55,9 +55,11 @@ export class Dcmal {
     }
 
     if (num < 1 && num > 0) {
-      const last: string = String(parseInt(strArr[1], 10));
+      const last: string = strArr[1].replace(/^0+/, '');
       const zl = `0.${last}`;
-      return `${minus}0.${strArr[1].replace(new RegExp(last, 'g'), '')}${parseFloat(zl).toFixed(prec).replace(',', '.').split('.')[1]}`;
+      const zeros = strArr[1].replace(new RegExp(last, 'g'), '')
+      const ending = (parseFloat(zl).toFixed(prec).replace(',', '.').split('.')[1]).replace(/0+$/, '')
+      return `${minus}0.${zeros}${ending}`;
     }
     return minus + num.toFixed(prec);
   }

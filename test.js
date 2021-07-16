@@ -25,5 +25,7 @@ test('Dcmal(): valid params', t => {
     t.equal('0.00000000123', dcmal.round(0.000000001234, { prec: 3 }), 'should return 0.00000000123')
     t.equal('0.000000000123', dcmal.round(0.0000000001234, { prec: 3 }), 'should return 0.000000000123')
     t.equal('0.0000000001234567812', dcmal.round(0.00000000012345678115, { prec: 10 }), 'should return 0.000000000123')
+    t.equal('0.0265', dcmal.round(0.0265, { prec: 4 }), 'should return 0.0265')
+    t.equal('0.0265', dcmal.round(0.026501, { prec: 4 }), 'should return 0.0265')
     t.end()
 })
